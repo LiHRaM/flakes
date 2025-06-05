@@ -44,6 +44,10 @@
 
           # Nix
           nil
+
+          # Kubernetes
+          k9s
+          kubectl
         ];
       };
     };
