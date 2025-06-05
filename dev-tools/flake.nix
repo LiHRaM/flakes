@@ -20,7 +20,7 @@
           helix
           yazi
           watchexec
-          jj
+          jujutsu
           fd
           
           # Golang
