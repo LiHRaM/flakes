@@ -48,6 +48,7 @@
           # Kubernetes
           k9s
           kubectl
+          kubectx
         ];
       };
     };
