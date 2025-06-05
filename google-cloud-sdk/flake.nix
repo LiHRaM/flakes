@@ -13,7 +13,6 @@
 
     perSystem = {pkgs, system, ...}: {
       packages.default = pkgs.google-cloud-sdk.withExtraComponents (with pkgs.google-cloud-sdk.components; [
-        kubectl
         gke-gcloud-auth-plugin
       ]);
     };
