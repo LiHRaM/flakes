@@ -12,6 +12,7 @@
     ];
 
     perSystem = {pkgs, system, ...}: {
+        
       packages.default = pkgs.buildEnv {
         name = "dev-utils";
         paths = with pkgs; [
@@ -43,8 +44,8 @@
 
           # Nix
           nil
-        ]
-      }
+        ];
+      };
     };
   };
 }
