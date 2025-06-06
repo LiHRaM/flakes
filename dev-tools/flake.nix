@@ -42,6 +42,9 @@
           # NodeJS
           yarn
 
+          # TypeScript
+          typescript-language-server
+
           # Nix
           nil
 
@@ -49,6 +52,7 @@
           k9s
           kubectl
           kubectx
+
         ];
       };
     };
