@@ -17,21 +17,34 @@
         name = "dev-utils";
         paths = with pkgs; [
           # CLI
+          nushell
           helix
           yazi
           watchexec
           jujutsu
           fd
           go-task
+          carapace
+          difftastic
+          starship
+          television
           
           # Golang
           go
           gopls
+          buf
+          protobuf_29
+          protoc-gen-go
+          protoc-gen-go-grpc
+          mockgen
 
           # Rust
           cargo
           rustc
 
+          # Python
+          uv
+          
           # Just
           just
           just-lsp
