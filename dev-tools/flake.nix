@@ -62,6 +62,9 @@
           # Nix
           nil
 
+          # Unison
+          unison-ucm
+
           # Kubernetes
           k9s
           kubectl
