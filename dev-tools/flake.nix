@@ -22,6 +22,7 @@
           watchexec
           jujutsu
           fd
+          go-task
           
           # Golang
           go
