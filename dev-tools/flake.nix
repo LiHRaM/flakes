@@ -37,6 +37,7 @@
           protoc-gen-go
           protoc-gen-go-grpc
           mockgen
+          goverter
 
           # Rust
           cargo
