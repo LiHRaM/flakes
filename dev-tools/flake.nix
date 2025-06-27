@@ -71,6 +71,8 @@
           kubectl
           kubectx
 
+          # YAML
+          yaml-language-server
         ];
       };
     };
