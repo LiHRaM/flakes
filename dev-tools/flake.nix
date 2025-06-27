@@ -3,15 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs-master.url = "github:nixos/nixpkgs?ref=master";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  outputs = inputs@{nixpkgs, flake-parts, ...}: flake-parts.lib.mkFlake {inherit inputs;} {
+  outputs = inputs@{nixpkgs, nixpkgs-master, flake-parts, ...}: flake-parts.lib.mkFlake {inherit inputs;} {
     systems = [
       "aarch64-darwin"
     ];
 
-    perSystem = {pkgs, system, ...}: {
+    perSystem = {pkgs, pkgs-master, system, ...}: {
         
       packages.default = pkgs.buildEnv {
         name = "dev-utils";
@@ -24,7 +25,7 @@
           jujutsu
           fd
           go-task
-          carapace
+          pkgs-master.carapace
           difftastic
           starship
           television
