@@ -73,6 +73,9 @@
 
           # YAML
           yaml-language-server
+
+          # JSON
+          vscode-json-languageserver
         ];
       };
     };
