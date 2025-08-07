@@ -76,6 +76,11 @@
 
           # JSON
           vscode-json-languageserver
+
+          # Bash
+          bash-language-server
+          shellcheck-minimal
+          shfmt
         ];
       };
     };
