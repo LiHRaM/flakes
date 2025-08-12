@@ -6,7 +6,11 @@ dev-tools:
 google-cloud-sdk:
     nix flake update
 
-upgrade: dev-tools google-cloud-sdk
+[working-directory: 'skhd-zig']
+skhd-zig:
+    nix flake update
+
+upgrade: dev-tools google-cloud-sdk skhd-zig
     git commit -am "chore: nix flake update"
 
 save: upgrade
