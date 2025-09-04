@@ -14,6 +14,7 @@
     perSystem = {pkgs, system, ...}: {
       packages.default = pkgs.google-cloud-sdk.withExtraComponents (with pkgs.google-cloud-sdk.components; [
         gke-gcloud-auth-plugin
+        cloud-sql-proxy
       ]);
     };
   };
