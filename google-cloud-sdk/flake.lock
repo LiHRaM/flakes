@@ -6,7 +6,6 @@
       },
       "locked": {
         "lastModified": 1756770412,
-        "narHash": "sha256-+uWLQZccFHwqpGqr2Yt5VsW/PbeJVTn9Dk6SHWhNRPw=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
         "rev": "4524271976b625a4a605beefd893f270620fd751",
@@ -20,11 +19,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1756979876,
-        "narHash": "sha256-0+SO32c31kiNFyNDcUdw+eK5ZUhQpTddB6esVB+oKvk=",
+        "lastModified": 1757493204,
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "2504f52027235bdbcd6d4331cbb2f3f4a18c4ff8",
+        "rev": "f9e9d45a64c8ff4e9906260804a1679a28819b4e",
         "type": "github"
       },
       "original": {
