@@ -92,16 +92,15 @@
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1757347588,
-        "owner": "nixos",
-        "repo": "nixpkgs",
+        "narHash": "sha256-tLdkkC6XnsY9EOZW9TlpesTclELy8W7lL2ClL+nma8o=",
         "rev": "b599843bad24621dcaa5ab60dac98f9b0eb1cabe",
-        "type": "github"
+        "revCount": 858212,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.858212%2Brev-b599843bad24621dcaa5ab60dac98f9b0eb1cabe/01992e5d-548e-7231-8669-92a393e208fa/source.tar.gz"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/0.1"
       }
     },
     "root": {
