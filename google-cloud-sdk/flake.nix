@@ -2,7 +2,7 @@
   description = "Google Cloud Platform Developer Flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0";
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
