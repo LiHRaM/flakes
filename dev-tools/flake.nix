@@ -33,13 +33,6 @@
           
           # Golang
           go
-          gopls
-          buf
-          protobuf_29
-          protoc-gen-go
-          protoc-gen-go-grpc
-          mockgen
-          goverter
 
           # Rust
           cargo
