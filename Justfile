@@ -3,7 +3,9 @@ set shell := ["nu", "-c"]
 nix := require("nix")
 skim := require("sk")
 
+flakenames := `ls **/flake.nix | get name | path dirname | to nuon`
 flakes := `ls **/flake.nix | each {|row| "./" + ($row.name | path dirname) } | to nuon`
+
 
 # If you run Just without an argument,
 # it opens up a fuzzy task picker
@@ -20,5 +22,10 @@ save MESSAGE='feat: manual changes':
     git push
 
 # Update all lockfiles and commit the changes
-upgrade: update (save 'chore: nix flake update')
+save-update: update (save 'chore: nix flake update')
     echo "All flakes have been upgraded"
+
+# Update the flakes in the profile
+upgrade +FLAKES=flakenames:
+    {{FLAKES}} | par-each {|flake| {{nix}} profile upgrade $flake | complete}
+
