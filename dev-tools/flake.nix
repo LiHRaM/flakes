@@ -23,7 +23,6 @@
           helix
           yazi
           watchexec
-          jujutsu
           fd
           go-task
           carapace
@@ -49,17 +48,11 @@
           markdown-oxide
           marksman
 
-          # NodeJS
-          yarn
-
           # TypeScript
           typescript-language-server
 
           # Nix
           nil
-
-          # Unison
-          unison-ucm
 
           # Kubernetes
           k9s
