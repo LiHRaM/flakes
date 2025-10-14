@@ -10,13 +10,15 @@ flakes := `ls **/flake.nix | each {|row| "./" + ($row.name | path dirname) } | t
 default:
     @just --choose --chooser {{skim}}
 
+# Update any and all flakes
 update +FLAKES=flakes:
     {{FLAKES}} | par-each {|dir| {{nix}} flake update --flake $dir | complete }
 
-save:
-    git commit -am "chore: updates"
+# Commit and save all changes
+save MESSAGE='feat: manual changes':
+    git commit -am "{{MESSAGE}}"
     git push
 
-
-update-commit: update save
+# Update all lockfiles and commit the changes
+upgrade: update (save 'chore: nix flake update')
     echo "All flakes have been upgraded"
