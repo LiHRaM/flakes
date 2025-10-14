@@ -1,5 +1,5 @@
 {
-  description = "Generic Developer Flake";
+  description = "CLI and Kubernetes Developer Tools";
 
   inputs = {
     # https://flakehub.com/flake/NixOS/nixpkgs?view=usage
@@ -18,7 +18,6 @@
       packages.default = pkgs.buildEnv {
         name = "dev-utils";
         paths = with pkgs; [
-          # CLI
           nushell
           helix
           yazi
@@ -29,46 +28,9 @@
           difftastic
           starship
           television
-          
-          # Golang
-          go
-
-          # Rust
-          cargo
-          rustc
-
-          # Python
-          uv
-          
-          # Just
-          just
-          just-lsp
-
-          # Markdown
-          markdown-oxide
-          marksman
-
-          # TypeScript
-          typescript-language-server
-
-          # Nix
-          nil
-
-          # Kubernetes
           k9s
           kubectl
           kubectx
-
-          # YAML
-          yaml-language-server
-
-          # JSON
-          vscode-json-languageserver
-
-          # Bash
-          bash-language-server
-          shellcheck-minimal
-          shfmt
         ];
       };
     };

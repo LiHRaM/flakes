@@ -1,17 +1,22 @@
-[working-directory: 'dev-tools']
-dev-tools:
-    nix flake update
+set shell := ["nu", "-c"]
 
-[working-directory: 'google-cloud-sdk']
-google-cloud-sdk:
-    nix flake update
+nix := require("nix")
+skim := require("sk")
 
-[working-directory: 'skhd-zig']
-skhd-zig:
-    nix flake update
+flakes := `ls **/flake.nix | each {|row| "./" + ($row.name | path dirname) } | to nuon`
 
-upgrade: dev-tools google-cloud-sdk skhd-zig
-    git commit -am "chore: nix flake update"
+# If you run Just without an argument,
+# it opens up a fuzzy task picker
+default:
+    @just --choose --chooser {{skim}}
 
-save: upgrade
+update +FLAKES=flakes:
+    {{FLAKES}} | par-each {|dir| {{nix}} flake update --flake $dir | complete }
+
+save:
+    git commit -am "chore: updates"
     git push
+
+
+update-commit: update save
+    echo "All flakes have been upgraded"
