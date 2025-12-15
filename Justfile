@@ -3,7 +3,7 @@ set shell := ["nu", "-c"]
 nix := require("nix")
 skim := require("sk")
 
-flakenames := `ls **/flake.nix | get name | path dirname | to nuon`
+flakenames := `glob **/flake.nix | path dirname | path basename | to nuon`
 flakes := `ls **/flake.nix | each {|row| "./" + ($row.name | path dirname) } | to nuon`
 
 
