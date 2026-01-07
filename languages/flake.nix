@@ -20,8 +20,7 @@
           go
 
           # Rust
-          cargo
-          rustc
+          rustup
 
           # Python
           uv
